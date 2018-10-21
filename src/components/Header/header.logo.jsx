@@ -8,7 +8,7 @@ const HeaderLogo = () => (
       src="https://placeimg.com/25/25/any"
       alt="logo"
     />
-    LOGO TEXT HERE
+    TEXT HERE
   </Link>
 );
 
