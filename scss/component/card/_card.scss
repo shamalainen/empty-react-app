@@ -1,0 +1,63 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+
+  @include medium-wide {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.card-container--2 {
+  .card {
+    @include medium-wide {
+      width: calc(100% / 2 - 0.5rem);
+    }
+  }
+}
+
+.card-container--3 {
+  .card {
+    @include wide {
+      width: calc(100% / 3 - 0.5rem);
+    }
+  }
+}
+
+.card {
+  padding: 2rem;
+  background-color: $white;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.card--white {
+  background-color: $white;
+  color: $black;
+}
+
+.card--blue {
+  background-color: $blue-primary-2;
+  color: $white;
+}
+
+.card--orange {
+  background-color: $orange-primary-0;
+  color: $white;
+}
+
+.card--red {
+  background-color: $red-primary-0;
+  color: $white;
+}
+
+.card--green {
+  background-color: $green-primary-1;
+  color: $white;
+}
+
+.card--purple {
+  background-color: $purple-primary-0;
+  color: $white;
+}
