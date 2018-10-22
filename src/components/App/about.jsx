@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { Card } from '../Card';
+import { ImagesImage } from '../Images';
+
 const paragraph = [
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dui neque. In feugiat gravida dui sed convallis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc nec laoreet lorem. Maecenas non elementum ipsum. Cras malesuada pulvinar lectus, at efficitur nibh. Cras fringilla commodo ornare. Aenean egestas sodales nisi non placerat. In hac habitasse platea dictumst. Etiam nec tincidunt elit. Aenean scelerisque diam id mi hendrerit, quis commodo turpis semper. Morbi faucibus elit nec porttitor tempor. Maecenas molestie mollis auctor.',
   'In eleifend ipsum non eleifend elementum. Sed sem orci, iaculis non euismod vel, hendrerit et lorem. Ut aliquet magna sit amet justo malesuada, eu rhoncus magna accumsan. Vivamus ut hendrerit sapien, dapibus accumsan ex. Ut sapien dolor, porta et est quis, condimentum egestas sapien. Aliquam erat risus, interdum et auctor ut, elementum sit amet nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec vehicula ex sapien, non tempus ante congue venenatis.',
@@ -12,9 +15,13 @@ const About = () => (
   <div className="container container--inset">
     <h1>PAGE 3</h1>
 
+    <ImagesImage category="tech" />
+
     {paragraph.map(i => (
       <p key={i}>{i}</p>
     ))}
+
+    <Card color="blue" />
   </div>
 );
 
