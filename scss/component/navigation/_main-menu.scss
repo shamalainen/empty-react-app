@@ -1,0 +1,10 @@
+.main-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-menu__item {
+  &:not(:first-child) {
+    margin-left: 1rem;
+  }
+}
