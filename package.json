@@ -27,6 +27,7 @@
     "file-loader": "1.1.5",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
+    "node-sass-glob-importer": "^5.2.0",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
@@ -46,22 +47,19 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "npm-run-all -p start-js gulp",
+    "build-css": "node-sass --importer node_modules/node-sass-glob-importer/dist/cli.js src/ -o src/",
+    "watch-css": "npm run build-css && node-sass --importer node_modules/node-sass-glob-importer/dist/cli.js src/ -o src/ --watch --recursive",
     "start-js": "node scripts/start.js",
-    "build": "npm run gulp-prod && node scripts/build.js",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "gulp": "gulp",
-    "gulp-prod": "gulp prod",
-    "gulp-dev": "gulp dev"
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "prepush": "npm run lint && CI=true npm run test",
+    "node-version": "node -v"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-clean-css": "^3.9.2",
-    "gulp-noop": "1.0.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sass-glob": "^1.0.8",
-    "gulp-v4": "^4.0.0-alpha.5",
+    "node-sass": "^4.9.3",
     "npm-run-all": "^4.1.2",
     "prettier-eslint": "^8.8.1"
   },
