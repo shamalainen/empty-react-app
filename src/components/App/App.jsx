@@ -1,20 +1,26 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
-import { Home, About, Contact } from './';
+import { Home, About, Contact } from '.';
 
 const App = () => (
   <div className="App">
     <div className="container container--inset">
       <ul className="main-menu">
         <li className="main-menu__item">
-          <Link className="main-menu__link" to="/">PAGE 1</Link>
+          <Link className="main-menu__link" to="/">
+            PAGE 1
+          </Link>
         </li>
         <li className="main-menu__item">
-          <Link className="main-menu__link" to="/page-2">PAGE 2</Link>
+          <Link className="main-menu__link" to="/page-2">
+            PAGE 2
+          </Link>
         </li>
         <li className="main-menu__item">
-          <Link className="main-menu__link" to="/page-3">PAGE 3</Link>
+          <Link className="main-menu__link" to="/page-3">
+            PAGE 3
+          </Link>
         </li>
       </ul>
     </div>

@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Contact = () => (
-  <div className="container container--inset">
-    <h1>Contact page</h1>
-    <form>
-      <input type="text" placeholder="title" />
-    </form>
-  </div>
-);
+import { Container, Form, Input } from '../common';
 
-export { Contact };
+export const Contact = () => (
+  <Container inset>
+    <h1>Contact page</h1>
+    <Form>
+      <Input type="text" placeholder="title" />
+    </Form>
+  </Container>
+);
